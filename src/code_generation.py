@@ -88,3 +88,27 @@ def FHT_decode(y):
   s=np.append(np.array([0]),num_to_binom(i,m))
   if a[i]<0: s[0]=1
   return s
+
+def complementary(m,r):
+  n=2**m
+  binom=1
+  for i in range(1,r+1):
+    binom+=math.comb(m,i)
+  H=np.zeros((n-binom,n))
+  iter=0
+  for i in range(n):
+    b=num_to_binom(i,m)
+    u=np.ones(n)
+    if np.sum(b)<=m-r-1:
+      for j in range(m):
+          if b[j]==1:
+            u*=(np.arange(n)//(2**j))%2
+      H[iter,:]=u.copy()
+      iter+=1
+  return H
+
+def accuracy(x, y):
+  for i in range(len(x)):
+    if int(x[i]) != int(y[i]):
+      return 0
+  return 1
