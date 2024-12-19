@@ -1,4 +1,0 @@
-matplotlib==3.8.0
-numpy==1.26.4
-torch @ https://download.pytorch.org/whl/cu121_full/torch-2.5.1%2Bcu121-cp310-cp310-linux_x86_64.whl
-tqdm==4.67.1
