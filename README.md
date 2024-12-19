@@ -21,6 +21,7 @@ Code is organaised in the following way.
     ├── gradient_optimization.py
     └── train_transformer.py
 ```
+ File `requirements.txt` contains the versions of the packages imported
 
  Files `code_generation.py` contain functions that generate noisy codewards, baseline deterministic maximum likelihood decoder and generation of conjugate (complementary) matrix, that is needed for direct gradient descent setup. 
  
