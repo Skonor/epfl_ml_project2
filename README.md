@@ -12,6 +12,7 @@ Code is organaised in the following way.
 
 ```
 ├── LICENSE
+├── requirements.txt
 ├── README.md
 └── src
     ├── code_generation.py ()
